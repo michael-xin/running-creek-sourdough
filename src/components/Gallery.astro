@@ -1,0 +1,82 @@
+---
+const breadVarieties = [
+  {
+    name: "The Country Classic",
+    description: "Our signature white loaf with a crisp, mahogany crust and a light, airy crumb.",
+    image: "/images/country-white.jpg"
+  },
+  {
+    name: "Rosemary & Sea Salt",
+    description: "Infused with fresh garden rosemary and topped with crunchy Maldon sea salt.",
+    image: "/images/rosemary.jpg"
+  },
+  {
+    name: "Toasted Walnut & Fig",
+    description: "A rustic, nutty loaf with the subtle sweetness of sun-dried figs.",
+    image: "/images/walnut-fig.jpg"
+  },
+  {
+    name: "Whole Wheat Harvest",
+    description: "A hearty, nutritious loaf made with freshly stone-ground whole grains.",
+    image: "/images/whole-wheat.jpg"
+  }
+];
+---
+
+<section id="bread" class="gallery container">
+  <div class="text-center mb-8">
+    <h2>Our Artisan Loaves</h2>
+    <p>Hand-scored and baked in small batches daily.</p>
+  </div>
+  <div class="bread-grid">
+    {breadVarieties.map((bread) => (
+      <div class="bread-card">
+        <div class="bread-image">
+          <img src={bread.image} alt={bread.name} />
+        </div>
+        <div class="bread-info">
+          <h3>{bread.name}</h3>
+          <p>{bread.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .bread-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+  }
+  .bread-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+  }
+  .bread-card:hover {
+    transform: translateY(-8px);
+  }
+  .bread-image {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background-color: var(--color-crumb);
+  }
+  .bread-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+  .bread-info p {
+    font-size: 0.95rem;
+    color: #666;
+  }
+</style>

@@ -1,0 +1,39 @@
+---
+---
+
+<section id="about" class="about container">
+  <div class="about-grid">
+    <div class="about-image">
+      <img src="/images/baker.jpg" alt="Our sourdough story" />
+    </div>
+    <div class="about-text">
+      <h2>The Story of Running Creek Sourdough</h2>
+      <p>It all started with a simple starter and a deep respect for the slow, natural process of fermentation. At Running Creek Sourdough, we believe that true artisan bread takes time, patience, and the highest quality ingredients.</p>
+      <p>Each loaf we bake is a labor of love, crafted by hand in our home microbakery. We use traditional techniques and long fermentation periods to develop the complex flavors and airy textures that define real sourdough.</p>
+      <p>Whether it's our signature Country White or our rotating specialty loaves, every bread that leaves our oven tells a story of tradition, craft, and the simple joy of a perfect crust.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+  }
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

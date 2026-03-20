@@ -1,0 +1,48 @@
+---
+const { title, tagline } = Astro.props;
+---
+
+<header class="hero">
+  <div class="hero-content text-center container">
+    <h1>{title}</h1>
+    <p class="tagline">{tagline}</p>
+    <a href="#bread" class="cta-button">See Our Bread</a>
+  </div>
+</header>
+
+<style>
+  .hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-dark);
+    /* In the future, you can add a background image here */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/hero-bread.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  h1 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  .tagline {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+  }
+  .cta-button {
+    background: var(--color-golden);
+    color: var(--color-dark);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: transform 0.2s;
+  }
+  .cta-button:hover {
+    transform: scale(1.05);
+  }
+</style>

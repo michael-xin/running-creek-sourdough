@@ -1,0 +1,58 @@
+:root {
+	--accent: 136, 58, 234;
+	--accent-light: 224, 204, 250;
+	--accent-dark: 49, 10, 101;
+	--accent-gradient: linear-gradient(
+		45deg,
+		rgb(var(--accent)),
+		rgb(var(--accent-light)) 30%,
+		white 60%
+	);
+  
+  /* Bread Palette */
+  --color-crust: #8B4513; /* SaddleBrown */
+  --color-golden: #DAA520; /* GoldenRod */
+  --color-crumb: #FFF8DC; /* Cornsilk */
+  --color-flour: #F5F5DC; /* Beige */
+  --color-dark: #2C1810;
+  --color-text: #4A3728;
+}
+
+html {
+	font-family: 'Inter', system-ui, sans-serif;
+	background: var(--color-flour);
+	color: var(--color-text);
+  line-height: 1.6;
+}
+
+body {
+	margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-dark);
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 1000px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.mt-4 { margin-top: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
